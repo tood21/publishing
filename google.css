@@ -1,0 +1,47 @@
+/* util */
+.hide {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+body {
+  background: url(images/main_bg.jpg) no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+#navbar {
+  padding: 10px;
+}
+
+.navbar__menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar__item ~ .navbar__item {
+  margin-right: 10px;
+}
+
+.navbar__item:hover {
+  text-decoration: underline;
+}
+
+.navbar__item a {
+  color: white;
+}
+
+.navbar__item:last-child {
+  background-color: #eb4231;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
