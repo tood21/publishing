@@ -25,54 +25,101 @@
           <a href="#">
             <i class="fas fa-th"></i>
           </a>
+          <!-- <div class="menu__bg"></div> -->
         </li>
-        <li class="navbar__item"><a href="#">정배</a></li>
+        <li class="navbar__item">
+          <a href="#">정배</a>
+          <div class="menu__bg"></div>
+        </li>
       </ul>
     </nav>
 
-    <main>
-      <h2><img src="images/google_logo.gif" alt="구글" /></h2>
-      <div>
-        <!-- 돋보기 아이콘 -->
-        <input type="text" />
-        <!-- 마이크 -->
+    <main id="main">
+      <h2>
+        <img src="images/google_logo.gif" alt="구글" class="google-logo" />
+      </h2>
+      <div class="search">
+        <h3 class="hide">검색</h3>
+        <i class="fas fa-search"></i>
+        <form>
+          <input
+            type="text"
+            placeholder="Google 검색 또는 URL 입력"
+            class="search__input"
+          />
+        </form>
+        <i class="fas fa-microphone"></i>
       </div>
-      <div>
-        <ul>
-          <li>
-            <a href="#">
-              <div>
-                <!-- 네이버 아이콘 -->
+
+      <section id="links">
+        <h3 class="hide">바로가기 메뉴</h3>
+        <ul class="links__list">
+          <li class="links__item">
+            <a href="#" class="links__link">
+              <div class="links__img__bg">
+                <img src="images/naver.png" alt="" class="links__img" />
               </div>
-              <p>NAVER</p>
+              <p class="links__text">NAVER</p>
             </a>
           </li>
-          <li>
-            <a href="#">
-              <div>
-                <!-- 네이버 아이콘 -->
+          <li class="links__item">
+            <a href="#" class="links__link">
+              <div class="links__img__bg">
+                <img src="images/youTube.png" alt="" class="links__img" />
               </div>
-              <p>NAVER</p>
+              <p class="links__text">YouTube</p>
             </a>
           </li>
-          <li>
-            <a href="#">
-              <div>
-                <!-- 네이버 아이콘 -->
+          <li class="links__item">
+            <a href="#" class="links__link">
+              <div class="links__img__bg">
+                <img src="images/google.png" alt="" class="links__img" />
               </div>
-              <p>NAVER</p>
+              <p class="links__text">Google</p>
             </a>
           </li>
-          <li>
-            <a href="#">
-              <div>
-                <!-- 네이버 아이콘 -->
+          <li class="links__item">
+            <a href="#" class="links__link">
+              <div class="links__img__bg">
+                <img src="images/netflix.png" alt="" class="links__img" />
               </div>
-              <p>NAVER</p>
+              <p class="links__text">Netflix</p>
+            </a>
+          </li>
+          <li class="links__item">
+            <a href="#" class="links__link">
+              <div class="links__img__bg">
+                <img src="images/FontAwesome.png" alt="" class="links__img" />
+              </div>
+              <p class="links__text">FontAwesome</p>
+            </a>
+          </li>
+          <li class="links__item">
+            <a href="#" class="links__link">
+              <div class="links__img__bg">
+                <img src="images/github.png" alt="" class="links__img" />
+              </div>
+              <p class="links__text">Github</p>
+            </a>
+          </li>
+          <li class="links__item">
+            <a href="#" class="links__link">
+              <div class="links__img__bg">
+                <img src="images/yes24.png" alt="" class="links__img" />
+              </div>
+              <p class="links__text">Yes24</p>
+            </a>
+          </li>
+          <li class="links__item">
+            <a href="#" class="links__link">
+              <div class="links__img__bg">
+                <i class="fas fa-plus"></i>
+              </div>
+              <p class="links__text">바로가기 추가</p>
             </a>
           </li>
         </ul>
-      </div>
+      </section>
     </main>
     <footer>
       <div>

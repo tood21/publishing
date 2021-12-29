@@ -9,6 +9,10 @@
   clip: rect(1px, 1px, 1px, 1px);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: url(images/main_bg.jpg) no-repeat;
   background-size: cover;
@@ -25,8 +29,9 @@ body {
   align-items: center;
 }
 
-.navbar__item ~ .navbar__item {
+.navbar__item {
   margin-right: 10px;
+  position: relative;
 }
 
 .navbar__item:hover {
@@ -36,6 +41,41 @@ body {
 .navbar__item a {
   color: white;
 }
+/* .menu__bg {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0;
+  transition: all 0.3s;
+  border-radius: 50%;
+  z-index: 5;
+}
+.navbar__item:hover .menu__bg {
+  opacity: 0.3;
+} */
+
+.navbar__item:nth-child(3) {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  text-decoration: none;
+  position: relative;
+}
+
+.navbar__item:nth-child(3):hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.3;
+  top: 0;
+  left: -5%;
+}
 
 .navbar__item:last-child {
   background-color: #eb4231;
@@ -44,4 +84,84 @@ body {
   line-height: 40px;
   text-align: center;
   border-radius: 50%;
+  text-decoration: none;
+}
+
+#main {
+  text-align: center;
+}
+
+.google-logo {
+  border-radius: 30px;
+  margin-bottom: 38px;
+  max-width: 450px;
+}
+
+.search {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 564px;
+  padding: 12px 25px;
+  background-color: #fff;
+  border-radius: 35px;
+  margin-bottom: 14px;
+}
+.search__input {
+  width: 450px;
+  border: none;
+  outline: none;
+  vertical-align: middle;
+  line-height: 20px;
+}
+.search .fa-search {
+  opacity: 0.5;
+}
+.search .fa-microphone {
+  color: blue;
+  opacity: 0.8;
+}
+
+#links {
+  margin: 0 auto;
+  max-width: 450px;
+}
+.links__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.links__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  width: 110px;
+  padding: 20px 0;
+}
+
+.links__img {
+  width: 24px;
+  height: 24px;
+}
+
+.links__img__bg {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+.links__text {
+  font-size: 14px;
+}
+.links__img__bg .fa-plus {
+  color: black;
+  opacity: 0.8;
 }
