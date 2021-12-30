@@ -132,12 +132,26 @@ body {
 .links__modifier {
   position: absolute;
   background-color: transparent;
-  top: 10px;
-  right: 10px;
+  top: 0;
+  right: 0;
   opacity: 0;
   transition: all 1s cubic-bezier(1, -0.8, 0.69, 1.83);
   z-index: 10;
+  width: 30px;
+  height: 30px;
 }
+.links__modifier:hover::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: grey;
+  top: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0.1;
+  border-radius: 50%;
+}
+
 .fa-ellipsis-v {
   font-size: 12px;
   color: #fff;
