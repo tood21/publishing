@@ -11,6 +11,12 @@
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="google.css" />
   </head>
@@ -25,11 +31,9 @@
           <a href="#">
             <i class="fas fa-th"></i>
           </a>
-          <!-- <div class="menu__bg"></div> -->
         </li>
         <li class="navbar__item">
           <a href="#">정배</a>
-          <div class="menu__bg"></div>
         </li>
       </ul>
     </nav>
@@ -48,7 +52,7 @@
             class="search__input"
           />
         </form>
-        <i class="fas fa-microphone"></i>
+        <a href="#"><i class="fas fa-microphone"></i></a>
       </div>
 
       <section id="links">
@@ -56,77 +60,88 @@
         <ul class="links__list">
           <li class="links__item">
             <a href="#" class="links__link">
-              <div class="links__img__bg">
-                <img src="images/naver.png" alt="" class="links__img" />
+              <div class="links__img">
+                <img src="images/naver.png" alt="" class="links__icon" />
               </div>
               <p class="links__text">NAVER</p>
             </a>
+            <i class="fas fa-ellipsis-v links__modifier"></i>
           </li>
           <li class="links__item">
             <a href="#" class="links__link">
-              <div class="links__img__bg">
-                <img src="images/youTube.png" alt="" class="links__img" />
+              <div class="links__img">
+                <img src="images/youTube.png" alt="" class="links__icon" />
               </div>
               <p class="links__text">YouTube</p>
             </a>
+            <i class="fas fa-ellipsis-v links__modifier"></i>
           </li>
           <li class="links__item">
             <a href="#" class="links__link">
-              <div class="links__img__bg">
-                <img src="images/google.png" alt="" class="links__img" />
+              <div class="links__img">
+                <img src="images/google.png" alt="" class="links__icon" />
               </div>
               <p class="links__text">Google</p>
             </a>
+            <i class="fas fa-ellipsis-v links__modifier"></i>
           </li>
           <li class="links__item">
             <a href="#" class="links__link">
-              <div class="links__img__bg">
-                <img src="images/netflix.png" alt="" class="links__img" />
+              <div class="links__img">
+                <img src="images/netflix.png" alt="" class="links__icon" />
               </div>
               <p class="links__text">Netflix</p>
             </a>
+            <i class="fas fa-ellipsis-v links__modifier"></i>
           </li>
           <li class="links__item">
             <a href="#" class="links__link">
-              <div class="links__img__bg">
-                <img src="images/FontAwesome.png" alt="" class="links__img" />
+              <div class="links__img">
+                <img src="images/FontAwesome.png" alt="" class="links__icon" />
               </div>
               <p class="links__text">FontAwesome</p>
             </a>
+            <i class="fas fa-ellipsis-v links__modifier"></i>
           </li>
           <li class="links__item">
             <a href="#" class="links__link">
-              <div class="links__img__bg">
-                <img src="images/github.png" alt="" class="links__img" />
+              <div class="links__img">
+                <img src="images/github.png" alt="" class="links__icon" />
               </div>
               <p class="links__text">Github</p>
             </a>
+            <i class="fas fa-ellipsis-v links__modifier"></i>
           </li>
           <li class="links__item">
             <a href="#" class="links__link">
-              <div class="links__img__bg">
-                <img src="images/yes24.png" alt="" class="links__img" />
+              <div class="links__img">
+                <img src="images/yes24.png" alt="" class="links__icon" />
               </div>
               <p class="links__text">Yes24</p>
             </a>
+            <i class="fas fa-ellipsis-v links__modifier"></i>
           </li>
           <li class="links__item">
             <a href="#" class="links__link">
-              <div class="links__img__bg">
+              <div class="links__img">
                 <i class="fas fa-plus"></i>
               </div>
               <p class="links__text">바로가기 추가</p>
             </a>
+            <i class="fas fa-ellipsis-v links__modifier"></i>
           </li>
         </ul>
       </section>
     </main>
-    <footer>
-      <div>
-        <!-- 링크 아이콘 -->
-        <a href="#">Faula Thierry</a>
+
+    <footer id="footer">
+      <div class="footer__left">
+        <a href="#" class="footer__link-icon"><i class="fas fa-link"></i></a>
+        <a href="#" class="footer__link">Faula Thierry</a>
       </div>
-      <!-- 펜 아이콘 -->
+      <div class="foooter__right">
+        <button class="footer__setting-btn"><i class="fas fa-pen"></i></button>
+      </div>
     </footer>
   </body>
 </html>
