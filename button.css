@@ -1,0 +1,48 @@
+.favorite-sub input[type="radio"] {
+  display: none;
+}
+.favorite-sub input[type="radio"] + label {
+  width: 100px;
+  padding: 10px;
+  color: white;
+  background-color: pink;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 20px;
+  text-align: center;
+  user-select: none;
+}
+.favorite-sub input[type="radio"]:checked + label {
+  background-color: red;
+}
+
+.study-sub input[type="checkbox"] {
+  display: none;
+}
+.study-sub input[type="checkbox"] + label {
+  width: 100px;
+  padding: 10px;
+  color: white;
+  background-color: pink;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 20px;
+  text-align: center;
+  user-select: none;
+}
+.study-sub input[type="checkbox"]:checked + label {
+  background-color: red;
+}
+
+.file-upload input[type="file"] {
+  display: none;
+}
+.file-upload label {
+  padding: 10px;
+  color: white;
+  background-color: #999999;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  user-select: none;
+}

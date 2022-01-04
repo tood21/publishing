@@ -1,0 +1,127 @@
+.hide {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+.product {
+  max-width: 1060px;
+}
+
+.product__list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  font-weight: 500;
+  gap: 40px;
+}
+
+.product__item {
+  flex-basis: 30.8%;
+}
+.product__img {
+  background: url("images/product_item1.png");
+  background-size: 100% 100%;
+  width: 100%;
+  height: 176px;
+  margin-bottom: 10px;
+}
+
+.product__title {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.product-info {
+  font-size: 13px;
+  color: #90949c;
+  margin-bottom: 8px;
+}
+.product-info .product__brand {
+  position: relative;
+  padding-left: 10px;
+}
+.product-info .product__brand::before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  background-color: #90949c;
+  opacity: 0.3;
+  left: 4px;
+  top: 0px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 2.5px;
+  background-color: #e6eaed;
+  position: relative;
+}
+.progress-bar__velue {
+  width: 67%;
+  position: absolute;
+  background-color: #00b2b2;
+  top: 0;
+  bottom: 0;
+}
+.funding-info {
+  display: flex;
+  justify-content: space-between;
+}
+.funding-info__progress {
+  color: #00b2b2;
+  font-size: 17px;
+}
+.funding-info__money,
+.funding-info__dday {
+  font-size: 14px;
+  color: #90949c;
+}
+
+.funding-info__money {
+  padding-left: 6px;
+  position: relative;
+}
+.funding-info__money::before {
+  content: "";
+  width: 1.5px;
+  height: 1.5px;
+  background-color: #90949c;
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  border-radius: 50%;
+}
