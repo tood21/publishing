@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .hide {
+        overflow: hidden;
+        display: block;
+        position: absolute;
+        border: 0;
+        width: 1px;
+        height: 1px;
+        clip: rect(1px, 1px, 1px, 1px);
+      }
+
+      @keyframes move {
+        0% {
+          top: 0;
+          left: 0;
+        }
+        25% {
+          top: 0;
+          left: calc(100% - 100px);
+        }
+        50% {
+          top: calc(100% - 100px);
+          left: calc(100% - 100px);
+        }
+        75% {
+          top: calc(100% - 100px);
+          left: 0;
+        }
+        100% {
+          top: 0;
+          left: 0;
+        }
+      }
+
+      @keyframes cloudmove {
+        0% {
+          top: 300px;
+          left: 50px;
+        }
+        50% {
+          top: 300px;
+          left: 300px;
+        }
+        100% {
+          top: 300px;
+          left: 50px;
+        }
+      }
+
+      @keyframes cloudmove2 {
+        0% {
+          top: 400px;
+          right: 50px;
+        }
+        25% {
+          top: 400px;
+          right: 300px;
+        }
+        75% {
+          top: 400px;
+          right: 50px;
+        }
+        100% {
+          top: 400px;
+          right: 50px;
+        }
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        background: #dd3e54; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to right,
+          #6be585,
+          #dd3e54
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to right,
+          #6be585,
+          #dd3e54
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .dimm {
+        position: fixed;
+        background-color: rgba(55, 55, 59, 0.7);
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .modalWrap {
+        background: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        position: fixed;
+        width: 700px;
+        height: 40vh;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.5s;
+      }
+
+      .modalWrap:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 19), 0 6px rgba(0, 0, 0, 23);
+      }
+
+      .ball {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: olivedrab;
+        animation: move linear 10s infinite;
+      }
+
+      .prev,
+      .next {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        color: #fff;
+        line-height: 60px;
+        text-align: center;
+        background-color: pink;
+        opacity: 0.7;
+        top: 50%;
+      }
+
+      .prev {
+        left: 0;
+        transform: translate(-50%, -50%);
+      }
+
+      .next {
+        right: 0;
+        transform: translate(50%, -50%);
+      }
+      .indicator {
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        transform: translateX(50%);
+      }
+      .indicator__item {
+        display: inline-block;
+      }
+      .indicator__link {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: gray;
+      }
+      .indicator__link.on {
+        background-color: #000;
+      }
+      .up__img {
+        position: absolute;
+        width: 100px;
+        bottom: -100px;
+        right: 0;
+        opacity: 0.1;
+        transition: all 0.5s;
+      }
+      .up__img:hover {
+        padding-bottom: 100px;
+        opacity: 1;
+      }
+
+      .cloud__img--left {
+        position: absolute;
+        width: 100px;
+        animation: cloudmove ease-in-out infinite 10s;
+      }
+      .cloud__img--right {
+        position: absolute;
+        width: 100px;
+        animation: cloudmove2 ease-in-out infinite 20s;
+      }
+
+      .btnClose {
+        position: absolute;
+        top: -80px;
+        right: 50%;
+        width: 50px;
+        height: 50px;
+        background-color: gray;
+        border-radius: 50%;
+        border-style: none;
+        transform: translateX(50%);
+        opacity: 0.3;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dimm">
+      <img src="./images/구름2.png" alt="구름" class="cloud__img--left" />
+      <img src="./images/구름2.png" alt="구름" class="cloud__img--right" />
+    </div>
+    <div class="modalWrap">
+      <article class="contents">MODAL</article>
+      <!-- 4. animation : ball이 modalWrap을 반복해서 도는 애니메이션 만들기 -->
+      <!-- 5. animation : 구름 애니메이션, dimm과 modalWrap 사이로 지나가기 반복해서, 서로 속도가 다르게 -->
+      <div class="ball"></div>
+      <img src="./images/c2.png" alt="rain" class="up__img" />
+
+      <!-- 6. transition : modalWrap에 마우스를 올렸을때, box-shadow나오게 만들기 -->
+      <!-- 7. transition : modalWrap에 마우스를 올렸을때, 캐릭터가 아래에서 위로 나오기 -->
+
+      <a href="javascript:void(0);" class="btn prev">PREV</a>
+      <a href="javascript:void(0);" class="btn next">NEXT</a>
+
+      <ul class="indicator">
+        <li class="indicator__item">
+          <a class="indicator__link on" href="#">
+            <span class="hide">1번 슬라이드</span>
+          </a>
+        </li>
+        <li class="indicator__item">
+          <a class="indicator__link" href="#">
+            <span class="hide">2번 슬라이드</span>
+          </a>
+        </li>
+        <li class="indicator__item">
+          <a class="indicator__link" href="#">
+            <span class="hide">3번 슬라이드</span>
+          </a>
+        </li>
+      </ul>
+
+      <button type="button" class="btnClose">X</button>
+    </div>
+  </body>
+</html>
