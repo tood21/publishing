@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FLEX 연습</title>
+    <style>
+      .wrap {
+        margin: 100px auto;
+        width: 500px;
+        border: 1px solid red;
+      }
+      .wrap div {
+        height: 100px;
+      }
+
+      .a {
+        background-color: coral;
+      }
+
+      .b {
+        background-color: olive;
+      }
+
+      .c {
+        background-color: gold;
+      }
+      .d {
+        background-color: dodgerblue;
+      }
+      .e {
+        background-color: tomato;
+      }
+
+      .box1 {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .box1 .a {
+        flex-basis: 50%;
+      }
+      .box1 .b {
+        flex-basis: 50%;
+      }
+      .box1 .c {
+        flex-basis: 100%;
+      }
+
+      .box2 {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .box2 .a {
+        flex-basis: 100%;
+      }
+      .box2 .b {
+        flex-basis: 50%;
+      }
+      .box2 .c {
+        flex-basis: 50%;
+      }
+      .box2 .d {
+        flex-basis: 100%;
+      }
+
+      .box3 {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .box3 .a {
+        flex-basis: 33.333%;
+      }
+      .box3 .b {
+        flex-basis: 33.333%;
+      }
+      .box3 .c {
+        flex-basis: 33.333%;
+      }
+      .box3 .d {
+        flex-basis: 50%;
+      }
+      .box3 .e {
+        flex-basis: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap box1">
+      <div class="a">A</div>
+      <div class="b">B</div>
+      <div class="c">C</div>
+    </div>
+
+    <div class="wrap box2">
+      <div class="a">A</div>
+      <div class="b">B</div>
+      <div class="c">C</div>
+      <div class="d">D</div>
+    </div>
+
+    <div class="wrap box3">
+      <div class="a">A</div>
+      <div class="b">B</div>
+      <div class="c">C</div>
+      <div class="d">D</div>
+      <div class="e">E</div>
+    </div>
+  </body>
+</html>

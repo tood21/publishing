@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+// 볼드체 인 프로퍼티를 일반 굵기로 리셋
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+mark {
+  background-color: transparent;
+  color: inherit;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong,
+th {
+  font-weight: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+}
+
+i,
+em,
+address {
+  font-style: inherit;
+}
+
+blockquote {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid red;
+}
+
+fieldset {
+  border: none;
+}
+
+input[type="text"]::placeholder {
+  color: olive;
+  font-style: italic;
+}
+input[type="text"]:focus {
+  background-color: olive;
+  color: fff;
+}
+input[type="search"] {
+}
+input[type="checkbox"] {
+}
+input[type="radio"] {
+}
+button {
+  cursor: pointer;
+}
+
+caption {
+  // caption-side: bottom;
+}
+
+.blind,
+hr,
+legend {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+q:before,
+q:after {
+  content: "";
+}
