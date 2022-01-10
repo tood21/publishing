@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>checkbox custom</title>
+    <style>
+      input[type="checkbox"] {
+        display: none;
+      }
+      input[type="checkbox"] + label {
+        font-weight: 800;
+        display: inline-block;
+        cursor: pointer;
+        line-height: 22px;
+        padding-left: 27px;
+        background: url("images/check_off_24.png") left/22px no-repeat;
+      }
+      input[type="checkbox"]:checked + label {
+        background-image: url("images/check_on_24.png");
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <legend>회원가입</legend>
+      <input type="checkbox" id="custom" />
+      <label for="custom">약관 전체 동의</label>
+    </fieldset>
+  </body>
+</html>
