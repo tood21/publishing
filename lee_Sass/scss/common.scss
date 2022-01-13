@@ -4,5 +4,35 @@
 
 body {
   font-family: sans-serif;
-  font-size: 50px;
+}
+
+.subHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  border-bottom: 1px solid #ddd;
+  background-color: #f1f1f1;
+  padding: 0 10px;
+}
+
+.btnBack {
+  font-size: 20px;
+  background-color: coral;
+}
+
+.space {
+  flex-grow: 1;
+  background-color: red;
+  height: 30px;
+}
+
+.title {
+  padding: 0 10px;
+  font-weight: 600;
+}
+
+.btnOption {
+  font-size: 30px;
+  background-color: olive;
 }
