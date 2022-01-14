@@ -298,7 +298,6 @@ h1 {
             color: #fff;
           }
         }
-
         &::after {
           content: "";
           background: url(../img/ic_list_02.png) no-repeat;
@@ -339,8 +338,7 @@ h1 {
             background-color: #fff;
             position: absolute;
             bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
+            left: 100px;
           }
         }
         a {
@@ -373,7 +371,7 @@ h1 {
   }
 }
 
-.ad-info {
+.marketing-info {
   .ad-info-list {
     li:nth-child(2) {
       &::after {

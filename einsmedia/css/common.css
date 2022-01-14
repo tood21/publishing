@@ -421,8 +421,7 @@ h1 img {
   background-color: #fff;
   position: absolute;
   bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 100px;
 }
 .marketing-info .section-cont ul li a {
   cursor: pointer;
@@ -450,13 +449,13 @@ h1 img {
   line-height: 23px;
 }
 
-.ad-info .ad-info-list li:nth-child(2)::after {
+.marketing-info .ad-info-list li:nth-child(2)::after {
   background-position: -60px 0;
 }
-.ad-info .ad-info-list li:nth-child(3)::after {
+.marketing-info .ad-info-list li:nth-child(3)::after {
   background-position: -120px 0;
 }
-.ad-info .ad-info-list li:nth-child(4)::after {
+.marketing-info .ad-info-list li:nth-child(4)::after {
   background-position: -180px 0;
 }
 
