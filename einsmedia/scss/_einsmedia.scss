@@ -65,13 +65,14 @@ h1 {
 }
 
 .section-wrapper {
+  background: no-repeat center / cover;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-top: 100px;
   .section-cont {
-    width: 1350px;
+    max-width: 1350px;
     padding: 68px 40px;
     header {
       display: flex;
@@ -109,22 +110,28 @@ h1 {
 }
 
 .visual-area {
-  background: url(../img/mvis_04.jpg) no-repeat center / cover;
-  align-items: center;
+  background-image: url(../img/mvis_04.jpg);
   position: relative;
-  article {
-    padding-left: 130px;
-    color: #fff;
-    h2 {
-      font-family: "Montserrat", sans-serif;
-      font-size: 62px;
-      line-height: 70px;
-      font-weight: 500;
-      margin-bottom: 36px;
-    }
-    p {
-      font-family: inherit;
-      font-weight: 500;
+  .section-cont {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    article {
+      width: 100%;
+      padding-left: 10%;
+      color: #fff;
+      h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 62px;
+        line-height: 70px;
+        font-weight: 500;
+        margin-bottom: 36px;
+      }
+      p {
+        font-family: inherit;
+        font-weight: 500;
+      }
     }
   }
 }
@@ -264,7 +271,7 @@ h1 {
 }
 
 .marketing-info {
-  background: url(../img/business_01.jpg) no-repeat center / cover;
+  background-image: url(../img/business_01.jpg);
   color: #fff;
   .section-cont {
     header {
@@ -439,4 +446,129 @@ h1 {
       }
     }
   }
+}
+
+.work-info {
+  background-image: url(../img/bg_msec04.jpg);
+  color: #fff;
+  .section-cont {
+    header {
+      h2 {
+        &::after {
+          content: ".";
+          color: #fff;
+        }
+      }
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      li {
+        width: 30%;
+        padding: 20px;
+        strong {
+          display: block;
+          font-size: 28px;
+          line-height: 40px;
+          font-weight: 500;
+          margin-bottom: 60px;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: #fff;
+            bottom: -29px;
+            left: 2px;
+          }
+        }
+        p {
+          font-size: 17px;
+          line-height: 30px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+.grow-info {
+  background-image: url(../img/bg_msec05.jpg);
+  color: #fff;
+  .section-cont {
+    header {
+      margin-bottom: 30px;
+    }
+    article {
+      width: 90%;
+      margin: 0 auto;
+      img {
+        max-height: 470px;
+      }
+      p {
+        text-align: center;
+        margin: 20px auto;
+        max-width: 800px;
+        padding: 15px 0;
+        background-color: #323436;
+        font-size: 17px;
+        line-height: 25px;
+        border-radius: 30px;
+      }
+    }
+  }
+}
+
+.people-info {
+  .section-cont {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      li {
+        position: relative;
+        &::after {
+          content: "";
+          width: 30px;
+          height: 2px;
+          background-color: #000;
+          position: absolute;
+          top: 15px;
+          right: 23px;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: 12px;
+          right: 23px;
+          width: 7px;
+          height: 7px;
+          border-right: 2px solid #000;
+          border-bottom: 2px solid #000;
+          -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        strong {
+          display: block;
+          font-size: 22px;
+          line-height: 33px;
+          font-weight: 700;
+          margin-bottom: 49px;
+          position: relative;
+          &::after {
+            content: "";
+            width: 100%;
+            height: 3px;
+            position: absolute;
+            background-color: #000;
+            bottom: -24px;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+#footer-wrapper {
 }

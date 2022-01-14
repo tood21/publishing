@@ -169,6 +169,7 @@ h1 img {
 }
 
 .section-wrapper {
+  background: no-repeat center/cover;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -176,7 +177,7 @@ h1 img {
   padding-top: 100px;
 }
 .section-wrapper .section-cont {
-  width: 1350px;
+  max-width: 1350px;
   padding: 68px 40px;
 }
 .section-wrapper .section-cont header {
@@ -212,22 +213,28 @@ h1 img {
 }
 
 .visual-area {
-  background: url(../img/mvis_04.jpg) no-repeat center/cover;
-  align-items: center;
+  background-image: url(../img/mvis_04.jpg);
   position: relative;
 }
-.visual-area article {
-  padding-left: 130px;
+.visual-area .section-cont {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.visual-area .section-cont article {
+  width: 100%;
+  padding-left: 10%;
   color: #fff;
 }
-.visual-area article h2 {
+.visual-area .section-cont article h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 62px;
   line-height: 70px;
   font-weight: 500;
   margin-bottom: 36px;
 }
-.visual-area article p {
+.visual-area .section-cont article p {
   font-family: inherit;
   font-weight: 500;
 }
@@ -350,7 +357,7 @@ h1 img {
 }
 
 .marketing-info {
-  background: url(../img/business_01.jpg) no-repeat center/cover;
+  background-image: url(../img/business_01.jpg);
   color: #fff;
 }
 .marketing-info .section-cont header p::before {
@@ -495,6 +502,116 @@ h1 img {
   position: relative;
 }
 .solution-info .section-cont ul li strong::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  background-color: #000;
+  bottom: -24px;
+  left: 0;
+}
+
+.work-info {
+  background-image: url(../img/bg_msec04.jpg);
+  color: #fff;
+}
+.work-info .section-cont header h2::after {
+  content: ".";
+  color: #fff;
+}
+.work-info .section-cont ul {
+  display: flex;
+  justify-content: space-between;
+}
+.work-info .section-cont ul li {
+  width: 30%;
+  padding: 20px;
+}
+.work-info .section-cont ul li strong {
+  display: block;
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  position: relative;
+}
+.work-info .section-cont ul li strong::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background-color: #fff;
+  bottom: -29px;
+  left: 2px;
+}
+.work-info .section-cont ul li p {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.grow-info {
+  background-image: url(../img/bg_msec05.jpg);
+  color: #fff;
+}
+.grow-info .section-cont header {
+  margin-bottom: 30px;
+}
+.grow-info .section-cont article {
+  width: 90%;
+  margin: 0 auto;
+}
+.grow-info .section-cont article img {
+  max-height: 470px;
+}
+.grow-info .section-cont article p {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 15px 0;
+  background-color: #323436;
+  font-size: 17px;
+  line-height: 25px;
+  border-radius: 30px;
+}
+
+.people-info .section-cont ul {
+  display: flex;
+  justify-content: space-between;
+}
+.people-info .section-cont ul li {
+  position: relative;
+}
+.people-info .section-cont ul li::after {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  top: 15px;
+  right: 23px;
+}
+.people-info .section-cont ul li::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 23px;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.people-info .section-cont ul li strong {
+  display: block;
+  font-size: 22px;
+  line-height: 33px;
+  font-weight: 700;
+  margin-bottom: 49px;
+  position: relative;
+}
+.people-info .section-cont ul li strong::after {
   content: "";
   width: 100%;
   height: 3px;
