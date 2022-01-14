@@ -8,4 +8,4 @@ publishing 공부하는곳
 * 와디즈 상품 리스트 [https://tood21.github.io/publishing/wadiz.html]
 * 모달 (CSS 연습) [https://tood21.github.io/publishing/modal.html]
 * 체크박스 커스텀(백그라운드 이미지) [https://tood21.github.io/publishing/checkbox.html]
-* 에인스미디어 클론 [https://tood21.github.io/publishing/einsmedia.html]
+* 아인스미디어 클론 [https://tood21.github.io/publishing/einsmedia.html]
