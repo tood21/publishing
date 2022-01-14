@@ -449,13 +449,13 @@ h1 img {
   line-height: 23px;
 }
 
-.marketing-info .ad-info-list li:nth-child(2)::after {
+.marketing-info .section-cont .ad-info-list li:nth-child(2)::after {
   background-position: -60px 0;
 }
-.marketing-info .ad-info-list li:nth-child(3)::after {
+.marketing-info .section-cont .ad-info-list li:nth-child(3)::after {
   background-position: -120px 0;
 }
-.marketing-info .ad-info-list li:nth-child(4)::after {
+.marketing-info .section-cont .ad-info-list li:nth-child(4)::after {
   background-position: -180px 0;
 }
 

@@ -372,20 +372,22 @@ h1 {
 }
 
 .marketing-info {
-  .ad-info-list {
-    li:nth-child(2) {
-      &::after {
-        background-position: -60px 0;
+  .section-cont {
+    .ad-info-list {
+      li:nth-child(2) {
+        &::after {
+          background-position: -60px 0;
+        }
       }
-    }
-    li:nth-child(3) {
-      &::after {
-        background-position: -120px 0;
+      li:nth-child(3) {
+        &::after {
+          background-position: -120px 0;
+        }
       }
-    }
-    li:nth-child(4) {
-      &::after {
-        background-position: -180px 0;
+      li:nth-child(4) {
+        &::after {
+          background-position: -180px 0;
+        }
       }
     }
   }
