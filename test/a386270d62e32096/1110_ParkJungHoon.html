@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform Transition Quiz</title>
+    <style>
+      /* reset */
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+
+      /* layout */
+
+      .btnHam {
+        display: block;
+        margin:30px auto;
+        width: 60px;
+        height: 40px; 
+        border: 10px solid green;
+        padding:10px;
+      }
+
+      .btnHam span {
+        display: block;
+        width: 100%;
+        height:6px;
+        background-color:salmon; 
+        transition:all 0.4s;
+      }
+
+      .btnHam .b {
+        margin: 10px 0;
+      }
+
+      /* Quiz 1 */
+      .one:hover .b {
+        width: 30%;
+      } 
+       .two:hover .b {
+        width: 30%;
+      }  
+       .two:hover .c{
+        width: 10%;
+      }  
+
+     
+      /* 딱 X자를 만들고 싶은데 뭔가 계속 어색한데 팁이 있을까요? */
+      .three .a {
+        transform-origin: top left;
+      }
+
+      .three .c {
+        transform-origin: bottom left;
+      }
+
+      .three:hover .a {
+        rotate: 45deg;
+        transform: translateX(7px) rotate(35deg);
+      }
+
+      .three:hover .b {
+        transform: scaleX(0);
+      }
+
+      .three:hover .c {
+        transform: translateX(7px) rotate(-35deg);
+      }
+
+
+       /* Bonus */
+       .four {
+           transition:all 0.2s 1s;
+       }
+       .four span {
+            position:relative;
+            transform-origin:right center; 
+            transition:all 0.2s 1.2s;
+        }
+
+        .four b {
+            position:absolute;
+            display:block;
+            left:0;top:0;
+            width:0;
+            height:100%; 
+            transition:all 0.4s cubic-bezier(0.47, 0, 0.745, 0)
+        }
+
+        .four .a b {
+            background:olive;
+        }
+        .four .b b {
+            transition-delay:0.2s;
+            background:goldenrod
+        }
+
+        .four .c b {
+            transition-delay:0.4s;
+            background:mediumslateblue
+        }
+
+        .four:hover {
+            background-color:salmon;
+        }
+
+        .four:hover b {
+            width:100%;
+        }
+
+        .four:hover span {
+            transform:scaleX(0);
+        }
+    </style>
+  </head>
+  <body>
+    <a href="#" class="btnHam one">
+      <span class="a"></span>
+      <span class="b"></span>
+      <span class="c"></span>
+    </a>
+    <a href="#" class="btnHam two">
+      <span class="a"></span>
+      <span class="b"></span>
+      <span class="c"></span>
+    </a>
+    <a href="#" class="btnHam three">
+      <span class="a"></span>
+      <span class="b"></span>
+      <span class="c"></span>
+    </a>
+    <a href="#" class="btnHam four">
+      <span class="a"><b></b></span>
+      <span class="b"><b></b></span>
+      <span class="c"><b></b></span>
+    </a>
+  </body>
+</html>

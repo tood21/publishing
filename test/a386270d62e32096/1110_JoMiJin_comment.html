@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition, transform 과제</title>
+    <style>
+        /* Quiz 3. */
+        body {
+            margin: 0;
+            padding: 0;
+            background: #A6F7C3;
+        }
+
+        .btnHam {
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: #333333;
+            border-radius: 10px;
+            align-items: center;  /* 불필요 */
+            text-decoration: none;
+            transform: translate(0, -50%); /*실제 좌우중앙정렬은 되고있지 않음 */
+            overflow: hidden; /* 불필요 */
+            
+        }
+
+        .btnHam span {
+            display: block;
+            position: absolute; /* 굳이 포지션 필요없음 ^^ */
+            top: 50%;
+            width: 80%;
+            height: 8px;
+            background-color: #9ef2bc;
+        }
+
+        .btnHam .a {
+            position: absolute;
+            left: 0;
+            top: 25%;
+        }
+
+        .btnHam:hover .a {
+            top: 50%;
+            transition: all 0.3s;
+            transition-timing-function: linear;
+            transform: rotate(45deg);
+            z-index: 10;  /* 불필요 */
+        }
+
+        .btnHam .b {
+            position: absolute;
+            left: 0;
+            top: 50%;
+        }
+
+        .btnHam:hover .b {
+            display: none;
+        }
+
+        .btnHam .c {
+            position: absolute;
+            left: 0;
+            top: 75%;
+        }
+
+        .btnHam:hover .c {
+            top: 50%;
+            transition: all 0.3s; 
+            /* hover했을 때 transition을 주었기 때문에 마우스를 떼었을때 효과가 
+            자연스럽게 Reverse 되지 않아요. 
+            이건 .btnHam:hover .c 가 아니라, .btnHam .c요소에 
+            Trnasition을 넣어야 해요
+            */
+            transition-timing-function: linear; /* 위에 Transition 축약형에 넣어서 사용하세요 */
+            transform: rotate(-45deg);
+            z-index: 10;  /* 불필요 */
+        }
+
+        /* //Quiz 3. 끝*/
+    </style>
+</head>
+
+<body>
+    <a href="#none" class="btnHam">
+        <span class="a"></span>
+        <span class="b"></span>
+        <span class="c"></span>
+    </a>
+</body>
+
+</html>

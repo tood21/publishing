@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+</head>
+<style> 
+
+    /* 이건 a태그 리셋이예요 */
+    a { text-decoration:none; color:inherit;}
+
+    /* 공통 */
+    .btnHam {
+        display: block;
+        width: 50px;
+        height: 30px;
+        position:relative;
+        border:1px solid #ddd;
+        margin:50px; 
+    }
+
+    .btnHam span {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 3px;
+        transition: all .5s;
+        background-color: brown;
+    }
+ 
+    .btnHam .a{
+        top: 0;
+    }
+    .btnHam .b{
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .btnHam .c{
+        bottom: 0;
+    }
+
+    .btnHam.one:hover .b{ /* hover 됐을 때 두번째 줄 줄이기 */
+        width: 70%;
+    }
+ 
+
+    /* Quiz 2 */
+   
+    .two span{
+        background-color: darkcyan;
+    }
+   
+    .two .c {
+        transition-delay:0.2s;
+    }
+    
+    .two:hover .b{ /* hover 됐을 때 두번째 줄 줄이기 */
+        width: 70%;
+    }
+ 
+    .two:hover .c{ /* hover 됐을 때 세번째 줄 줄이기 */
+        width: 30%;
+    }
+
+    /* Quiz 3 */
+    
+    .three span{
+        background-color: darkorange;
+    }
+    .three .a {
+        transform-origin:left top;
+    }
+    .three:hover .a{ /* hover 됐을 때 회전 */ 
+        transform:translateX(4px) rotate(33deg) ;
+    }
+   
+    .three:hover .b{ /* hover 됐을 때 두번째 줄 줄이기 */
+        width: 0;
+    }
+    
+    .three .c {
+        transform-origin:left bottom;
+    }
+    .three:hover .c{ /* hover 됐을 때 세번째 줄 줄이기 */
+ 
+        transform:translateX(4px)  rotate(-33deg);
+    }
+</style>
+<body>
+    <a href="#" class="btnHam one">
+        <span class="a"></span>
+        <span class="b"></span>
+        <span class="c"></span>
+    </a>
+
+
+    <a href="#" class="btnHam two">
+        <span class="a"></span>
+        <span class="b"></span>
+        <span class="c"></span>
+    </a>
+
+    <a href="#" class="btnHam three">
+        <span class="a"></span>
+        <span class="b"></span>
+        <span class="c"></span>
+    </a>
+</body>
+</html>
