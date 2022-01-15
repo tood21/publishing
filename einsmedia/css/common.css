@@ -317,18 +317,18 @@ aside #ad-info a img {
   height: 100%;
   width: 100%;
 }
-.visual-area .section-cont article {
+.visual-area .section-cont .header {
   padding-left: 10%;
   color: #fff;
 }
-.visual-area .section-cont article h2 {
+.visual-area .section-cont .header h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 62px;
   line-height: 1.2;
   font-weight: 500;
   margin-bottom: 36px;
 }
-.visual-area .section-cont article p {
+.visual-area .section-cont .header p {
   font-family: inherit;
   font-weight: 500;
 }
@@ -562,10 +562,10 @@ aside #ad-info a img {
   position: relative;
 }
 .solution-info .section-cont ul li a:hover::after {
-  animation: arrow-move1 1s ease-in-out;
+  animation: arrow-move1 0.5s ease-in-out;
 }
 .solution-info .section-cont ul li a:hover::before {
-  animation: arrow-move2 1s ease-in-out;
+  animation: arrow-move2 0.5s ease-in-out;
 }
 .solution-info .section-cont ul li a::after {
   content: "";
@@ -694,10 +694,10 @@ aside #ad-info a img {
   position: relative;
 }
 .people-info .section-cont ul li a:hover::after {
-  animation: arrow-move1 1s ease-in-out;
+  animation: arrow-move1 0.5s ease-in-out;
 }
 .people-info .section-cont ul li a:hover::before {
-  animation: arrow-move2 1s ease-in-out;
+  animation: arrow-move2 0.5s ease-in-out;
 }
 .people-info .section-cont ul li a::after {
   content: "";

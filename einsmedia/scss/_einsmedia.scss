@@ -224,7 +224,7 @@ aside {
     align-items: center;
     height: 100%;
     width: 100%;
-    article {
+    .header {
       padding-left: 10%;
       color: #fff;
       h2 {
@@ -397,8 +397,6 @@ aside {
         .list-hover {
           transition: all 0.8s ease-in-out;
           top: 0;
-          // bottom: 0;
-          // right: 0;
           left: 0;
           width: 100%;
           height: 100%;
@@ -419,8 +417,6 @@ aside {
           box-sizing: border-box;
           padding: 155px 25px 0 25px;
           display: block;
-          // height: 100%;
-          // width: 100%;
           strong {
             position: relative;
             z-index: 100;
@@ -511,10 +507,10 @@ aside {
         a {
           &:hover {
             &::after {
-              animation: arrow-move1 1s ease-in-out;
+              animation: arrow-move1 0.5s ease-in-out;
             }
             &::before {
-              animation: arrow-move2 1s ease-in-out;
+              animation: arrow-move2 0.5s ease-in-out;
             }
           }
           &::after {
@@ -658,10 +654,10 @@ aside {
         a {
           &:hover {
             &::after {
-              animation: arrow-move1 1s ease-in-out;
+              animation: arrow-move1 0.5s ease-in-out;
             }
             &::before {
-              animation: arrow-move2 1s ease-in-out;
+              animation: arrow-move2 0.5s ease-in-out;
             }
           }
           &::after {
