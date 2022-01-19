@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../reset.css" />
+    <style>
+      .box {
+        background: url(./spiderman.jpg) no-repeat center center/cover;
+        border-radius: 10px;
+        width: 300px;
+        height: 200px;
+        background-position: center;
+        margin: 100px auto;
+        overflow: hidden;
+        box-sizing: border-box;
+        position: relative;
+      }
+
+      .box:hover .link {
+        background-color: red;
+      }
+      .box:hover .link p {
+        bottom: 0;
+      }
+      .box:hover .option {
+        opacity: 1;
+      }
+
+      .box .link {
+        transition: all 1s ease;
+        display: block;
+        opacity: 0.8;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        position: absolute;
+      }
+
+      .box .link p {
+        transition: all 1s ease;
+        padding: 10px;
+        margin: 0;
+        position: absolute;
+        left: 0;
+        bottom: -60px;
+        width: 100%;
+        background-color: #000;
+        opacity: 0.8;
+        color: green;
+        box-sizing: border-box;
+      }
+
+      .box .option {
+        transition: all 1s ease;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #fff;
+        width: 40px;
+        height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <a href="#" class="link">
+        <p>spider man~~!!</p>
+      </a>
+      <button type="button" class="option">
+        <span class="material-icons"> more_vert </span>
+        <span class="blind"> 옵션메뉴 </span>
+      </button>
+      <ul></ul>
+    </div>
+  </body>
+</html>
